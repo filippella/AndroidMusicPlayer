@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorBlue" />
+            <stroke android:width="2dip" android:color="@color/colorLightGray" />
+            <size android:width="@dimen/dimen_player_slider_thumb" android:height="@dimen/dimen_player_slider_thumb" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <size android:width="@dimen/dimen_player_slider_thumb" android:height="@dimen/dimen_player_slider_thumb" />
+            <solid android:color="@color/playerSeek" />
+            <stroke android:width="2dip" android:color="@color/colorLightGray" />
+        </shape>
+    </item>
+</selector>

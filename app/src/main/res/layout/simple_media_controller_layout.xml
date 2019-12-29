@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/playerBg"
+    android:padding="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_singer_avatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/text_song_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Singer name veryveryverlong"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/slider_player_progress"
+        app:layout_constraintStart_toEndOf="@+id/image_singer_avatar"
+        app:layout_constraintTop_toTopOf="@+id/image_singer_avatar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ጥላሁን ገሰሰ"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_song_name"
+        app:layout_constraintStart_toStartOf="@+id/text_song_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_song_name" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/controlButtonPrevious"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="3dp"
+        android:tint="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@+id/text_elapsed"
+        app:layout_constraintTop_toBottomOf="@+id/slider_player_progress"
+        app:srcCompat="@drawable/ic_skip_previous" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/controlButtonPlayPause"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_action_button_state"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintStart_toEndOf="@+id/controlButtonPrevious"
+        app:layout_constraintTop_toTopOf="@+id/controlButtonPrevious"
+        app:srcCompat="@drawable/ic_play_arrow" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/controlButtonNext"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="3dp"
+        android:tint="@color/colorWhite"
+        app:layout_constraintStart_toEndOf="@+id/controlButtonPlayPause"
+        app:layout_constraintTop_toTopOf="@+id/controlButtonPrevious"
+        app:srcCompat="@drawable/ic_skip_next" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/controlButtonStop"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="3dp"
+        android:tint="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@+id/controlButtonRepeat"
+        app:layout_constraintTop_toTopOf="@+id/controlButtonNext"
+        app:srcCompat="@drawable/ic_stop" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="6dp"
+        android:tint="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/controlButtonShuffle"
+        app:srcCompat="@drawable/ic_more_vert" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/controlButtonRepeat"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="3dp"
+        android:tint="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@+id/controlButtonShuffle"
+        app:layout_constraintTop_toTopOf="@+id/controlButtonStop"
+        app:srcCompat="@drawable/ic_repeat" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/controlButtonShuffle"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="3dp"
+        android:tint="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="@+id/controlButtonRepeat"
+        app:srcCompat="@drawable/ic_shuffle" />
+
+    <TextView
+        android:id="@+id/text_elapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="13:59:06"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/image_singer_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/controlButtonPrevious" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/slider_player_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:indeterminateOnly="false"
+        android:maxHeight="3dp"
+        android:progressDrawable="@drawable/player_slider_bg"
+        android:splitTrack="false"
+        android:textColor="@color/colorWhite"
+        android:thumb="@drawable/player_slider_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/image_singer_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/text_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7:13"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="@+id/text_elapsed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
